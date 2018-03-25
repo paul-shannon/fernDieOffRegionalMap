@@ -4,15 +4,9 @@ infoWindows = [];
 //------------------------------------------------------------------------------------------------------------------------
 function createMarkers(map, markerSpec)
 {
-    console.log("=== markerSpec")
-    console.log(markerSpec.length);
-
     for(var i=0; i < markerSpecs.length; i++){
-        console.log("=== adding mapMarker " + i);
         var markerSpec = markerSpecs[i];
         var center = new google.maps.LatLng(markerSpec.lat, markerSpec.lon);
-        console.log("  center: ");
-        console.log(center);
         var newMapMarker = new google.maps.Circle({
            strokeColor: markerSpec.color,
            strokeOpacity: 0.8,
@@ -30,30 +24,19 @@ function createMarkers(map, markerSpec)
             position: new google.maps.LatLng(markerSpec.lat, markerSpec.lon)
             });
         infoWindows[newMapMarker.title] = newInfoWindow;
-        console.log("=== about to call addListener");
-        console.log("=== infoWindows")
-        console.log(infoWindows);
-        console.log("=== adding event listener for mapMarker " + i);
-        console.log(newMapMarker)
-        google.maps.event.addListener(newMapMarker, 'click', function (){
-            //if(currentInfoWindow != null)
-            //  currentInfoWindow.close()
-            console.log("=== infoWindows element number " + i);
-            console.log(newInfoWindow);
-            //newInfoWindow.setPosition(center);
-            //newInfoWindow.open(map);
-            //newInfoWindow.open(map);
-            iw = infoWindows[newMapMarker.title]
-            iw.setPosition(center);
-            iw.open(map);
-            iw.open(map);
-            // currentInfoWindow = infoWindow;
-            });
-        console.log("=== bottom of loop " + i);
-        console.log("   length of markerSpec: " + markerSpecs.length);
-   } // for i
+        assignPopup(map, newMapMarker, newInfoWindow, center)
+      } // for i
 
 } // createMarkers
+//------------------------------------------------------------------------------------------------------------------------
+function assignPopup(map, marker, infoWindow, center)
+{
+    google.maps.event.addListener(marker, 'click', function (){
+       infoWindow.setPosition(center);
+       infoWindow.open(map);
+       })
+
+} // assignPopup
 //------------------------------------------------------------------------------------------------------------------------
 function oldCreateMarkers()
 {
