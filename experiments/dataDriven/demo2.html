@@ -1,0 +1,60 @@
+<DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Regional Sword Fern Die-Off</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGwPVB2OLaBmQjLQvkoLv5M1ZQU64V7A"
+            type="text/javascript"></script>
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">n
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" type="text/css">
+
+<style>
+  .infoWindowTab{
+     width: 500px;
+     height: 300px;
+     }
+</style>
+
+<script src="data.js"></script>
+<script src="locations.js"></script>
+<script type="text/javascript">
+
+window.map = null;
+var currentInfoWindow = null;
+var marker1, marker2, infoWindow1, infoWindow2;
+//----------------------------------------------------------------------------------------------------
+function initialize()
+{
+   var mapCenter = new google.maps.LatLng(mapSpec.centerLat, mapSpec.centerLon);
+
+   var mapOptions = {
+       zoom: mapSpec.initialZoom, center: mapCenter, mapTypeId: google.maps.MapTypeId.ROADMAP
+       }
+   map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+   google.maps.event.addListener(map, 'tilesloaded', function (){createMarkers(map, markerSpecs)});
+
+   var myStyle = [{featureType: "administrative", elementType: "labels",    stylers: [{ visibility: "off" }]},
+                  {featureType: "poi",            elementType: "labels",    stylers: [{ visibility: "off" }]},
+                  {featureType: "water",          elementType: "labels",    stylers: [{ visibility: "off" }]},
+                  {featureType: "road",           elementType: "labels",    stylers: [{ visibility: "off" }]},
+                  {featureType: "road",           elementType: "geometry",  stylers: [{ visibility: "off" }]}
+                 ];
+
+   map.setOptions({styles: myStyle});
+
+} // initialize
+//----------------------------------------------------------------------------------------------------
+</script>
+
+</head>
+<body onload="initialize();">
+    <div>
+        <div id="map_canvas" style="margin: 20px; height: 90%; width: 95%;"></div>
+    </div>
+    <div style="width:700px"></div>
+</body>
+</html>
