@@ -1,6 +1,6 @@
-mapSpec = {initialZoom: 10,
-           centerLat: 47.927993, 
-           centerLon: -122.021478
+mapSpec = {initialZoom: 8,
+           centerLat: 48.194055, 
+           centerLon: -122.242321
            };
 
 var markerSpecs = [{title: "GroundZero",
@@ -93,6 +93,14 @@ var markerSpecs = [{title: "GroundZero",
                     lon: -122.693893,
                     color: "blue",
                    },
-
+                   {title: "Hornby Island, Helliwell Provincial Park",
+                    type: "simple",
+                    text: "First report, summer 2017, a potential site, needs followup. " +
+                           "(Reported by citizen naturalist who first noticed die-off at Seward Park.)",
+                    radius: 40,
+                    lat: 49.516576,
+                    lon: -124.641286,
+                    color: "blue",
+                   },
                   ];
 
