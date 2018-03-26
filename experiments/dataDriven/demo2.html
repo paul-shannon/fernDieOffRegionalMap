@@ -37,11 +37,12 @@ function initialize()
    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
    google.maps.event.addListener(map, 'tilesloaded', function (){createMarkers(map, markerSpecs)});
 
-   var myStyle = [{featureType: "administrative", elementType: "labels",    stylers: [{ visibility: "off" }]},
-                  {featureType: "poi",            elementType: "labels",    stylers: [{ visibility: "off" }]},
-                  {featureType: "water",          elementType: "labels",    stylers: [{ visibility: "off" }]},
-                  {featureType: "road",           elementType: "labels",    stylers: [{ visibility: "off" }]},
-                  {featureType: "road",           elementType: "geometry",  stylers: [{ visibility: "off" }]}
+   var state = "off";
+   var myStyle = [{featureType: "administrative", elementType: "labels",    stylers: [{ visibility: state }]},
+                  {featureType: "poi",            elementType: "labels",    stylers: [{ visibility: state }]},
+                  {featureType: "water",          elementType: "labels",    stylers: [{ visibility: state }]},
+                  {featureType: "road",           elementType: "labels",    stylers: [{ visibility: state }]},
+                  {featureType: "road",           elementType: "geometry",  stylers: [{ visibility: state }]}
                  ];
 
    map.setOptions({styles: myStyle});

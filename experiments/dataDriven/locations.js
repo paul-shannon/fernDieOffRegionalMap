@@ -1,29 +1,34 @@
-
-markers = [];
-infoWindows = [];
 //------------------------------------------------------------------------------------------------------------------------
 function createMarkers(map, markerSpec)
 {
     for(var i=0; i < markerSpecs.length; i++){
         var markerSpec = markerSpecs[i];
         var center = new google.maps.LatLng(markerSpec.lat, markerSpec.lon);
-        var newMapMarker = new google.maps.Circle({
-           strokeColor: markerSpec.color,
-           strokeOpacity: 0.8,
-           strokeWeight: 1,
-           fillColor: '#FFAAAA',
-           fillOpacity: 0.35,
-           center: center,
-           radius: markerSpec.radius,
-           title: 'Ground Zero',
-           map: map
-           });
-        markers.push(newMapMarker)
+        var newMapMarker = null
+        if(markerSpec.type == "circle"){
+            newMapMarker = new google.maps.Circle({
+                strokeColor: markerSpec.color,
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: '#FFAAAA',
+                fillOpacity: 0.35,
+                center: center,
+                radius: markerSpec.radius,
+                title: 'Ground Zero',
+                map: map
+            });
+           } // if circle
+        else if(markerSpec.type = "simple"){
+            newMapMarker = new google.maps.Marker({
+                position: {lat: markerSpec.lat, lng: markerSpec.lon},
+                title: markerSpec.title,
+                map: map
+               })
+            }; // if simple
         var newInfoWindow = new google.maps.InfoWindow({
-            content: "<h3> markersSpec " + markerSpec.title + " </h3>",
+            content: "<h3>" +  markerSpec.title + "</h3>" + markerSpec.text,
             position: new google.maps.LatLng(markerSpec.lat, markerSpec.lon)
             });
-        infoWindows[newMapMarker.title] = newInfoWindow;
         assignPopup(map, newMapMarker, newInfoWindow, center)
       } // for i
 
