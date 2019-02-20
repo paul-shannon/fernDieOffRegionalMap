@@ -1,11 +1,10 @@
-<DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
     <title>Regional Sword Fern Die-Off</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGwPVB2OLaBmQjLQvkoLv5M1ZQU64V7A"
             type="text/javascript"></script>
-    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">n
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -17,6 +16,25 @@
      width: 500px;
      height: 300px;
      }
+
+#explanatoryText{
+  margin: 20px;
+  padding: 10px;
+  height: 220px;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 24;
+  }
+
+#map_canvas{
+  margin: 20px;
+  height: 70%;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 5px;"
+  }
+
 </style>
 
 <script src="data.js"></script>
@@ -52,9 +70,21 @@ function initialize()
 </script>
 
 </head>
+
 <body onload="initialize();">
     <div>
-        <div id="map_canvas" style="margin: 20px; height: 90%; width: 95%;"></div>
+        <div id="explanatoryText">
+          A tentative and evolving map of sword fern die-off sites in the Puget Lowlands.
+          <ul>
+            <li> <font color="red"> Red </font> sites are large (&gt; 1 acre) were previously dominated by sword ferns, have seen no regeneration, and now constitute an ecological disturbance.
+            <li> <font color="orange"> Orange </font> sites exhibit moderate die-off, are often smaller in size, usually with mixed understory species.
+            <li> <font color="blue"> Blue </font> sites are provisional.  Dead ferns have been observed, but without  much spread, and at present posing little or no ecosystem threat.
+          </ul>
+        Use your mouse to zoom and pan.  Click on a site to get more information.  We hope to curate this currently quite scant
+        data, adding time-lapse photography, and site metrics.
+        Contributions, updates and (especially) corrections are welcome: please send email to <A HREF="mailto:paul.thurmond.shannon@gmail.com">Paul Shannon</A>.
+        </div>
+        <div id="map_canvas"></div>
     </div>
     <div style="width:700px"></div>
 </body>

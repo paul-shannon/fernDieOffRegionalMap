@@ -21,6 +21,15 @@ function createMarkers(map, markerSpec)
         else if(markerSpec.type = "simple"){
             newMapMarker = new google.maps.Marker({
                 position: {lat: markerSpec.lat, lng: markerSpec.lon},
+                icon: {
+                    // url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: markerSpec.radius/20,
+                    fillColor: markerSpec.color,
+                    strokeColor: markerSpec.color,
+                    //scaledSize: new google.maps.Size(markerSpec.radius, markerSpec.radius),
+                    //size = new google.maps.Size(markerSpec.radius, markerSpec.radius),
+                },
                 title: markerSpec.title,
                 map: map
                })
