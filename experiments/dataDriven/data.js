@@ -1,5 +1,6 @@
 mapSpec = {initialZoom: 10,
-           centerLat: 47.576690,
+           centerLat: 47.68,
+           //centerLat: 47.576690,
            centerLon: -122.418343,
            //centerLat:    47.64398,
            //centerLon:  -122.248967,
