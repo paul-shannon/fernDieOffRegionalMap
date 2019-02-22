@@ -12,10 +12,16 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" type="text/css">
 
 <style>
-  .infoWindowTab{
+.infoWindowTab{
      width: 500px;
      height: 300px;
      }
+
+#updateTimeStamp{
+  margin-left: 60px;
+  font-style: italic;
+  font-size: 20px;
+}
 
 #explanatoryText{
   margin: 20px;
@@ -75,6 +81,7 @@ function initialize()
     <div>
         <div id="explanatoryText">
           A tentative, evolving and certainly incomplete map of sword fern die-off sites in the Puget Lowlands.
+          <span id="updateTimeStamp"> Last updated Feb 21st, 2019.</span>
           <ul>
             <li> <font color="red"> Red </font> sites are large (&gt; 1 acre) were previously dominated by sword ferns, have seen no regeneration, and now constitute an ecological disturbance.
             <li> <font color="orange"> Orange </font> sites exhibit moderate die-off, are often smaller in size, usually with mixed understory species.
