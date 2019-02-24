@@ -1,4 +1,4 @@
-mapSpec = {initialZoom: 10,
+mapSpec = {initialZoom: 9,
            centerLat: 47.6,
            //centerLat: 47.576690,
            centerLon: -122.418343,

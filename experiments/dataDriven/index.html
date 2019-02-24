@@ -20,27 +20,35 @@
 #updateTimeStamp{
   margin-left: 60px;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #explanatoryText{
   margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   padding: 10px;
-  height: 220px;
+  padding-top: 5px;
+  height: 150px;
   width: 95%;
   border: 1px solid black;
   border-radius: 5px;
-  font-size: 24;
+  font-size: 16;
   }
 
 #map_canvas{
   margin: 20px;
+  margin-top: 5px;
   height: 70%;
-  width: 95%;
+  width: 97%;
   border: 1px solid black;
   border-radius: 5px;"
   }
 
+#contextAndAssumpiontsButton{
+   margin-left: 20px;
+   font-size: 18;
+}
 </style>
 
 <script src="data.js"></script>
@@ -73,7 +81,14 @@ function initialize()
 
 } // initialize
 //----------------------------------------------------------------------------------------------------
+//
+function popupInfo() {
+  window.open("background.html",'popUpWindow','height=600,width=800,left=200,top=100,,scrollbars=yes,menubar=no');
+  return false;
+  }
+
 </script>
+//----------------------------------------------------------------------------------------------------
 
 </head>
 
@@ -81,9 +96,10 @@ function initialize()
     <div>
         <div id="explanatoryText">
           A tentative, evolving and certainly incomplete map of sword fern die-off sites in the Puget Lowlands.
+          <button id="contextAndAssumpiontsButton" onclick="popupInfo()">More Information</button>
           <span id="updateTimeStamp"> Last updated Feb 21st, 2019.</span>
           <ul>
-            <li> <font color="red"> Red </font> sites are large (&gt; 1 acre) were previously dominated by sword ferns, have seen no regeneration, and now constitute an ecological disturbance.
+            <li> <font color="red"> Red </font> sites are large (1 acre or more), were previously dominated by sword ferns, have seen no regeneration, and now constitute an ecological disturbance.
             <li> <font color="orange"> Orange </font> sites exhibit moderate die-off, are often smaller in size, usually with mixed understory species.
             <li> <font color="blue"> Blue </font> sites are provisional.  Dead ferns have been observed, but without
             much spread, and at present apparently posing little or no ecosystem threat.
