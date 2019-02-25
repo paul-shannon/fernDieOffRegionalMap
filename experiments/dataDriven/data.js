@@ -377,6 +377,23 @@ var markerSpecs = [{title: "GroundZero",
                    },
 
 
+                   /***********
+                    kim frapier says:
+
+                   4400 Block of East Mercer Way? (east of Hollerbach
+                   Open Space on private property, 1 data point) – –
+                   remove from map for article.  On private
+                   property. Unsure of site history and don’t think we
+                   should include this data point for the story. I
+                   don’t want private property owners thinking that
+                   MIPR or our working group is going onto their
+                   property to monitor these without their permission
+                   and without the City first reaching out to them. I
+                   know that Al saw these from E. Mercer Way and was
+                   not on their property when he took the data point,
+                   but would still like to be mindful of this issue. I
+                   will get more information from Al and then reach
+                   out to the landowner at a later date.
 
                    {title: "< 40 dead",
                     type: "simple",
@@ -386,8 +403,7 @@ var markerSpecs = [{title: "GroundZero",
                     radius: 40,
                     color: "blue",
                    },
-
-
+                   *************/
 
                    {title: "increasing deaths over time",
                     type: "simple",
@@ -410,6 +426,22 @@ var markerSpecs = [{title: "GroundZero",
                    },
 
 
+                   /**************************
+                   kim frappier says (email 25 feb)
+
+                    Parkwood Ridge (1 data point) – Needs follow up
+                    visit · I didn’t know about this data point from
+                    Al, so will do a site visit to confirm. Do you
+                    have more information on where the data is
+                    collected from? Parkwood Ridge is another forested
+                    open space similar to SE 53rd with similar
+                    conditions and site history. The data point he
+                    collected is down a private drive and adjacent to
+                    private property. I think the location of this
+                    data point really needs to be ground-truthed and
+                    corrected for any kind of public facing map.
+                    Would recommend removing from map until that can
+                    be done
 
                    {title: "> 80 dead",
                     type: "simple",
@@ -419,6 +451,7 @@ var markerSpecs = [{title: "GroundZero",
                     radius: 40,
                     color: "blue",
                    },
+                   *****************************/
 
 
 
