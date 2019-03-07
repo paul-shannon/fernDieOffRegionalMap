@@ -58,6 +58,7 @@ var markerSpecs = [
                     lon: -122.049626,
                     color: "orange",
                    },
+                   /**********
                    {title: "IslandWood Campus",
                     type: "simple",
                     text: "10m x 10m, first reported autum 2017; 'worsening' (3/19)",
@@ -66,6 +67,7 @@ var markerSpecs = [
                     lon: -122.528598,
                     color: "orange",
                    },
+                   *************/
                    {title: "Trail between Fort Ward and Blakeley Harbor Parks",
                     type: "simple",
                     text: "7500 sq.ft. December 2017",
