@@ -24,6 +24,17 @@ var markerSpecs = [
                     color: "red",
                    },
 
+
+                   {title: "Tiger Mountain Swamp Trail",
+                    type: "simple",
+                    text: "400 dead ferns along 1 mile of the trail (14 mar 2019), Al Smith",
+                    radius: 60,
+                    lat: 47.532360,
+                    lon: -122.007313,
+                    color: "red",
+                    },
+
+
                    {title: "Upper Luther Burbank Park",
                     type: "simple",
                     text: "1/4 acre, last report 2016",
@@ -152,7 +163,7 @@ var markerSpecs = [
                     color: "blue",
                    },
 
-                   {title: "dead ferns among healthy",
+                   {title: "Dead Horse Canyon",
                     type: "simple",
                     text: "photo depicts steep se facing slope,  some completely dead ferns among healthy.  Mature acma [Big Leaf Maple] forest Al Smith Field Report 1",
                     lon: -122.2491365220084,
